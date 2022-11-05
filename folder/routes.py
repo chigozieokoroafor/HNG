@@ -28,7 +28,7 @@ def operation():
                     result = float(data["x"]) + float(data["y"])
                     d= {
                         "operation_type" : "addition",
-                        "result":result
+                        "result":int(result)
                     }
                 except :
                     return jsonify({"detail":"letters/operation n0t supported"}), 400
@@ -41,7 +41,7 @@ def operation():
                     result = float(data["x"]) - float(data["y"])
                     d= {
                         "operation_type" : "subtraction",
-                        "result":result
+                        "result":int(result)
                     }
                 except :
                     return jsonify({"detail":"letters/operation n0t supported"}), 400
@@ -54,7 +54,7 @@ def operation():
                     result = float(data["x"]) * float(data["y"])
                     d= {
                         "operation_type" : "multiplication",
-                        "result":result
+                        "result":int(result)
                     }
                 except :
                     return jsonify({"detail":"letters/operation n0t supported"}), 400
