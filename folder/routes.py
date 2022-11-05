@@ -30,6 +30,8 @@ def operation():
                         "operation_type" : "addition",
                         "result":int(result)
                     }
+                    d["slackUsername"] = "smalldev"
+                    return jsonify(d)
                 except :
                     return jsonify({"detail":"letters/operation n0t supported"}), 400
 
@@ -43,6 +45,8 @@ def operation():
                         "operation_type" : "subtraction",
                         "result":int(result)
                     }
+                    d["slackUsername"] = "smalldev"
+                    return jsonify(d)
                 except :
                     return jsonify({"detail":"letters/operation n0t supported"}), 400
 
@@ -56,9 +60,10 @@ def operation():
                         "operation_type" : "multiplication",
                         "result":int(result)
                     }
+                    d["slackUsername"] = "smalldev"
+                    return jsonify(d)
                 except :
                     return jsonify({"detail":"letters/operation n0t supported"}), 400
-        d["slackUsername"] = "smalldev"
-        return jsonify(d)
+        
     except KeyError as e:
         return jsonify({"detail":f"{e} not provided"})
